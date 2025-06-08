@@ -1,24 +1,67 @@
-.homepage {
+.hero-section {
+  position: relative;
+  background-image: url('/images/background.jpeg');
+  background-size: 100% 100%;;
+  background-position: top;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.527);
+  font-size: 20px;
+  padding-top: 0;
+}
+.hero-section h1 {
+    color: rgba(243, 235, 235, 1);
+    text-align: center;
+    font-weight: 900;
+    padding: 20px;
+}
+
+/* Semi-transparent overlay */
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Adjust opacity here */
+}
+
+.text-container {
+  padding-top: 200px;
+  display: flex;
+  flex-direction: column; /* Ensures h1 appears above h3 */
+  align-items: center; /* Centers text horizontally */
   text-align: center;
+  gap: 10px; /* Adds proper spacing between h1 and h3 */
+  color: rgb(240, 174, 8);
+}
+
+
+/* Grid Layout */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
   padding: 20px;
 }
 
-header {
-  background-color: #333;
-  color: white;
-  padding: 20px;
-}
-
-.intro, .event, .committee {
-  margin-top: 20px;
-  padding: 15px;
-  border: 1px solid #ddd;
+/* Grid Items */
+.grid-item img {
+  width: 100%;
+  height: auto;
   border-radius: 8px;
 }
 
+/* Footer */
 footer {
-  margin-top: 40px;
-  padding: 10px;
   background-color: #333;
   color: white;
+  text-align: center;
+  padding: 10px;
+  margin-top: 40px;
 }

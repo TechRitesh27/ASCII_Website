@@ -1,20 +1,51 @@
-nav {
-  background-color: #333;
-  padding: 10px;
-  position: relative;
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  position: absolute; /* Places navbar directly over homepage content */
+  width: 100%;
+  top: 0;
+  z-index: 1000; /* Ensures navbar stays on top */
 }
 
-ul {
+.logo-container img {
+  height: 50px; /* Adjust height to fit navbar */
+  width: auto; /* Keeps aspect ratio */
+  /* padding-left: 50px; */
+}
+
+.nav-links {
   display: flex;
   gap: 20px;
   list-style-type: none;
 }
 
-li a {
+.nav-links li a {
   color: white;
   text-decoration: none;
+  font-size: 18px;
+  padding: 10px 15px;
+  position: relative; /* Required for the underline effect */
 }
 
-li a:hover {
-  text-decoration: underline;
+/* Underline Effect on Hover */
+.nav-links li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px; /* Adjust distance from text */
+  width: 0%;
+  height: 2px;
+  background-color: white;
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-links li a:hover::after {
+  width: 100%;
+}
+
+/* Alternative: Change Text Color on Hover */
+.nav-links li a:hover {
+  color: #ffcc00; /* Change color on hover */
 }
