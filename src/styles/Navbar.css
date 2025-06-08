@@ -1,0 +1,20 @@
+nav {
+  background-color: #333;
+  padding: 10px;
+  position: relative;
+}
+
+ul {
+  display: flex;
+  gap: 20px;
+  list-style-type: none;
+}
+
+li a {
+  color: white;
+  text-decoration: none;
+}
+
+li a:hover {
+  text-decoration: underline;
+}
