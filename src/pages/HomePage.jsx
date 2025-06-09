@@ -47,9 +47,45 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* Event Highlights Section with Grid Layout */}
+      {/* Events cards  */}
+      <div className="EventText">
+        <h2>Our Events</h2>
+      </div>
+      <section className="event-cards">
+        <div className="card">
+          <a href="/technical-event">
+            <div className="card-image">
+              <img src="/images/TechEvent.jpg" alt="Technical Event" />
+              <div className="overlay-text">Explore coding challenges, hackathons, and tech talks!</div>
+            </div>
+            <h3>Technical Event</h3>
+          </a>
+        </div>
+
+        <div className="card">
+          <a href="/sports">
+            <div className="card-image">
+              <img src="/images/Sports.jpg" alt="Sports Event" />
+              <div className="overlay-text">Engage in exciting competitions and showcase your athleticism!</div>
+            </div>
+            <h3>Sports Event</h3>
+          </a>
+        </div>
+
+        <div className="card">
+          <a href="/freshers-farewell">
+            <div className="card-image">
+              <img src="/images/FnFParty.jpg" alt="Freshers & Farewell" />
+              <div className="overlay-text">Celebrate fresh beginnings and memorable farewells.</div>
+            </div>
+            <h3>Freshers & Farewell Party</h3>
+          </a>
+        </div>
+      </section>
+
+      {/* Events Highlights Section with Grid Layout */}
       <section className="event-highlights">
-        <h2>Aarohan 2K25 - Event Highlights</h2>
+        <h2>Aarohan 2K25 - Events Highlights</h2>
         <div className="grid-container">
           <div className="grid-item"><img src="/images/event1.jpeg" alt="Event 1" /></div>
           <div className="grid-item"><img src="/images/event2.jpeg" alt="Event 2" /></div>
