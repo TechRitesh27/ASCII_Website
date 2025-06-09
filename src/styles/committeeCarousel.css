@@ -1,0 +1,26 @@
+/* Customize the icon style (color, shape) */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: black;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+/* Move the whole button container inward */
+.carousel-control-prev {
+  left: -20px;  /* move from left edge */
+}
+
+.carousel-control-next {
+  right: -20px; /* move from right edge */
+}
+
+/* Optional: remove Bootstrap's filter */
+.carousel-control-prev,
+.carousel-control-next {
+  filter: invert(0);
+}
+
+.committee-card {
+  height: 550px;
+}

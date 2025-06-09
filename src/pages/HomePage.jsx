@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../styles/homepage.css";
 import ImageModal from "./ImageModal";
-
+import CommitteeCarousel from "../components/CommitteeCarousel";
 
 
 const HomePage = () => {
@@ -14,6 +14,7 @@ const HomePage = () => {
   const closeModal = () => {
     setSelectedImage(null);
   };
+
 
   return (
     <div className="homepage">
@@ -52,9 +53,9 @@ const HomePage = () => {
           <h2>Aarohan 2K25</h2>
           <p>Aarohan 2K25 was not just an event — it was an experience. <br />
             Organized by the ASCII Committee, Aarohan 2K25 brought together energy, excitement, and expression through three major events: <br />
-            Technical Fest <br />
-            Sports Matches <br />
-            Freshers & Farewell Celebration. <br />
+            <b>Technical Fest <br />
+              Sports Matches <br />
+              Freshers & Farewell Celebration. </b> <br />
             From tech brains to stage vibes, and cricket fever to DJ beats — every moment reflected unity, creativity, and the spirit of our department. <br />
             Aarohan means rise — and with this event, our memories, friendships, and efforts truly rose to a new level.</p>
         </div>
@@ -110,12 +111,31 @@ const HomePage = () => {
       {/* Image Popup Modal */}
       <ImageModal imageSrc={selectedImage} onClose={closeModal} />
 
+      {/* committee members  */}
+
+      <section className="committee-section">
+        <h2>Meet Our Committee</h2>
+        <CommitteeCarousel />
+      </section>
+
+
       {/* Footer */}
       <footer>
-        <p>&copy; 2025 ASCII - All Rights Reserved</p>
+        <h2>📞 Contact Details</h2>
+        <p>
+          🏢 ASCII | Association of Students of Computer Engineering <br />
+          📍 PREC Loni, Computer Department <br />
+          📱 Contact: <a href="tel:+917517541081">+91-7517541081</a> <br />
+          ✉️ Email: <a href="mailto:ascii.prec@gmail.com">ascii.prec@gmail.com</a> <br />
+          🔗 Follow us:
+          <a href="https://www.instagram.com/ascii_comp?igsh=MXFjNXZlcWh6a3RjNA==" target="_blank">📷 Instagram</a> |
+          <a href="https://youtube.com/ascii.prec" target="_blank">🎥 YouTube</a> <br />
+          © 2025 ASCII Committee. All Rights Reserved. <br /> </p>
+          <p className="author">✍️ Author - <strong>Ritesh Ukade</strong>
+        </p>
       </footer>
     </div>
   );
 };
 
-export default HomePage;
+export default HomePage; 

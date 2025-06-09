@@ -5,6 +5,7 @@ import HomePage from "./pages/HomePage";
 import TechnicalEvent from "./pages/TechnicalEvent";
 import Sports from "./pages/Sports";
 import FreshersAndFarewellParty from "./pages/FreshersAndFarewellParty";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const App = () => {
   return (
