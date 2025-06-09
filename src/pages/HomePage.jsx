@@ -1,7 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import "../styles/homepage.css";
+import ImageModal from "./ImageModal";
+
+
 
 const HomePage = () => {
+  const [selectedImage, setSelectedImage] = useState(null);
+
+  const openModal = (image) => {
+    setSelectedImage(image);
+  };
+
+  const closeModal = () => {
+    setSelectedImage(null);
+  };
+
   return (
     <div className="homepage">
       {/* Background Image */}
@@ -87,24 +100,15 @@ const HomePage = () => {
       <section className="event-highlights">
         <h2>Aarohan 2K25 - Events Highlights</h2>
         <div className="grid-container">
-          <div className="grid-item"><img src="/images/event1.jpeg" alt="Event 1" /></div>
-          <div className="grid-item"><img src="/images/event2.jpeg" alt="Event 2" /></div>
-          <div className="grid-item"><img src="/images/event3.jpeg" alt="Event 3" /></div>
-          <div className="grid-item"><img src="/images/event4.jpeg" alt="Event 4" /></div>
-          <div className="grid-item"><img src="/images/event5.jpeg" alt="Event 5" /></div>
-          <div className="grid-item"><img src="/images/event6.jpeg" alt="Event 6" /></div>
+          {["event1.jpeg", "event2.jpeg", "event3.jpeg", "event4.jpeg", "event5.jpeg", "event6.jpeg"].map((img, index) => (
+            <div className="grid-item" key={index} onClick={() => openModal(`/images/${img}`)}>
+              <img src={`/images/${img}`} alt={`Event ${index + 1}`} />
+            </div>
+          ))}
         </div>
       </section>
-
-      {/* Empty Boxes to be Filled with Images */}
-      <section className="additional-images">
-        <h2>Memorable Moments</h2>
-        <div className="grid-container">
-          <div className="grid-item"><img src="/images/moment1.jpeg" alt="Moment 1" /></div>
-          <div className="grid-item"><img src="/images/moment2.jpeg" alt="Moment 2" /></div>
-          <div className="grid-item"><img src="/images/moment3.jpeg" alt="Moment 3" /></div>
-        </div>
-      </section>
+      {/* Image Popup Modal */}
+      <ImageModal imageSrc={selectedImage} onClose={closeModal} />
 
       {/* Footer */}
       <footer>
