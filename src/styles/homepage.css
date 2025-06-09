@@ -32,13 +32,71 @@
 }
 
 .text-container {
-  padding-top: 200px;
+  /* padding-top: %; */
   display: flex;
-  flex-direction: column; /* Ensures h1 appears above h3 */
-  align-items: center; /* Centers text horizontally */
+  flex-direction: column;
+  align-items: center;
   text-align: center;
-  gap: 10px; /* Adds proper spacing between h1 and h3 */
-  color: rgb(240, 174, 8);
+  gap: 10px;
+  /* color: rgb(240, 174, 8); */
+}
+
+.text-container h3 {
+  padding-left: 20%;
+  padding-right: 20%;
+  padding-bottom: 8%;
+
+}
+
+/*about ASCII*/
+.about-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px;
+  gap: 20px;
+}
+
+.text-container1 {
+  flex: 1;
+  max-width: 50%;
+  text-align: left;
+  font-size: 18px;
+}
+
+.image-container {
+  flex: 1;
+  max-width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.image-container img {
+  width: 50%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* about aarohan 2k25 */
+.aarohan-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px;
+  gap: 20px;
+}
+
+.aarohan-section .image-container {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start; /* Image on the LEFT */
+}
+
+.aarohan-section .text-container {
+  flex: 1;
+  max-width: 50%;
+  text-align: left;
+  font-size: 18px;
 }
 
 

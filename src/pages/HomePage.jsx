@@ -8,11 +8,44 @@ const HomePage = () => {
       <div className="hero-section">
         <div className="text-container">
           <h1>ASCII - Student's Association of Computer Department</h1>
-          <h3>ASCII (Association of Students of Computer Engineering) is the official student body of the Computer Engineering Department at PREC Loni. Formed with a vision to promote technical growth, creativity, and leadership among students, ASCII acts as a bridge between faculty and learners, academics and innovation.
+          {/* <h3>ASCII (Association of Students of Computer Engineering) is the official student body of the Computer Engineering Department at PREC Loni. Formed with a vision to promote technical growth, creativity, and leadership among students, ASCII acts as a bridge between faculty and learners, academics and innovation.
             We organize a wide range of events including technical fests, cultural programs, social awareness drives, and fun activities to create a dynamic and collaborative campus environment.
-            In the academic year 2024–25, ASCII proudly introduced AAROHAN 2K25 — a themed celebration uniting all major student-led events under one identity of energy, elegance, and evolution.</h3>
+            In the academic year 2024–25, ASCII proudly introduced AAROHAN 2K25 — a themed celebration uniting all major student-led events under one identity of energy, elegance, and evolution./
+          </h3> */}
         </div>
       </div>
+
+      {/* about ASCII  */}
+      <section className="about-section">
+        <div className="text-container1">
+          <h2>About ASCII</h2>
+          <p>ASCII (Association of Students of Computer Engineering) is the official student body of the Computer Engineering Department at PREC Loni. Formed with a vision to promote technical growth, creativity, and leadership among students, ASCII acts as a bridge between faculty and learners, academics and innovation.
+            We organize a wide range of events including technical fests, cultural programs, social awareness drives, and fun activities to create a dynamic and collaborative campus environment.
+            In the academic year 2024–25, ASCII proudly introduced AAROHAN 2K25 — a themed celebration uniting all major student-led events under one identity of energy, elegance, and evolution.</p>
+        </div>
+
+        <div className="image-container">
+          <img src="/images/ASCII.png" alt="ASCII Team" />
+        </div>
+      </section>
+
+      {/* about aarohan 2k25  */}
+      <section className="aarohan-section">
+        <div className="image-container">
+          <img src="/images/AAROHAN.png" alt="Aarohan Event" />
+        </div>
+
+        <div className="text-container">
+          <h2>Aarohan 2K25</h2>
+          <p>Aarohan 2K25 was not just an event — it was an experience. <br />
+            Organized by the ASCII Committee, Aarohan 2K25 brought together energy, excitement, and expression through three major events: <br />
+            Technical Fest <br />
+            Sports Matches <br />
+            Freshers & Farewell Celebration. <br />
+            From tech brains to stage vibes, and cricket fever to DJ beats — every moment reflected unity, creativity, and the spirit of our department. <br />
+            Aarohan means rise — and with this event, our memories, friendships, and efforts truly rose to a new level.</p>
+        </div>
+      </section>
 
       {/* Event Highlights Section with Grid Layout */}
       <section className="event-highlights">
@@ -31,9 +64,9 @@ const HomePage = () => {
       <section className="additional-images">
         <h2>Memorable Moments</h2>
         <div className="grid-container">
-          <div className="grid-item"><img src="/images/moment1.jpg" alt="Moment 1" /></div>
-          <div className="grid-item"><img src="/images/moment2.jpg" alt="Moment 2" /></div>
-          <div className="grid-item"><img src="/images/moment3.jpg" alt="Moment 3" /></div>
+          <div className="grid-item"><img src="/images/moment1.jpeg" alt="Moment 1" /></div>
+          <div className="grid-item"><img src="/images/moment2.jpeg" alt="Moment 2" /></div>
+          <div className="grid-item"><img src="/images/moment3.jpeg" alt="Moment 3" /></div>
         </div>
       </section>
 
