@@ -1,0 +1,170 @@
+.sports-hero-section {
+    position: relative;
+    background-image: url('/images/background.jpeg');
+    /* Image only for hero & navbar */
+    background-size: cover;
+    background-position: center 1px;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+    /* Keeps full screen height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+
+/* Overlay for better text visibility */
+.sports-hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(60px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(-100px);
+    }
+}
+.sports-hero-section h1 {
+    position: relative;
+    z-index: 1;
+    opacity: 0;
+    /* Initially invisible */
+    animation: fadeIn 2s ease-in-out forwards;
+}
+
+/* Overview Section */
+.sports-overview {
+  padding: 50px;
+  text-align: center;
+}
+
+.sports-overview h2 {
+    padding-bottom: 10px;
+}
+
+.sports-overview h3 {
+    padding: 10px;
+}
+
+.sports-overview ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sports-overview ul li {
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+/* Results Section */
+.sports-results {
+  text-align: center;
+  padding: 50px;
+}
+.sports-results h3 {
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+
+.result-table table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.result-table th, .result-table td {
+  padding: 15px;
+  border: 1px solid #ddd;
+}
+
+.result-table th {
+  background-color: #222;
+  color: white;
+}
+
+.result-table tbody tr:hover {
+  background-color: rgba(255, 204, 0, 0.2); /* Soft highlight on hover */
+}
+
+/* Winner Gallery */
+.winner-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.winner-gallery img {
+  width: 300px;
+  height: 250px;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.winner-gallery img:hover {
+  transform: scale(1.1); /* Smooth zoom effect on hover */
+}
+
+
+/* mini gallery */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Grid Items */
+.grid-item img {
+  width: 100%;
+  /* height: auto; */
+  border-radius: 8px;
+  height: 200px; /* Set a uniform height for all images */
+  object-fit: cover; /* Crops images while maintaining aspect ratio */
+}
+
+.committee-section {
+  padding-top: 20px;
+}
+.committee-section h2 {
+  padding-bottom: 20px;
+  text-align: center;
+  color: rgb(94, 94, 211);
+}
+
+
+/* Modal Overlay */
+.modal-overlay {
+  display: flex; /* ✅ Ensures centered popup */
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.modal-img {
+  max-width: 90%;
+  max-height: 80vh;
+  border-radius: 10px;
+}

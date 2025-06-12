@@ -1,7 +1,5 @@
 import React from "react";
 import "../styles/technicalEvent.css";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
 
 const TechnicalEvent = () => {
   return (
@@ -219,9 +217,6 @@ const TechnicalEvent = () => {
           </table>
         </div>
       </section>
-
-      <Footer />
-
     </div>
   );
 };

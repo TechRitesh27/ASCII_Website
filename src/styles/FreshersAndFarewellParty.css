@@ -1,0 +1,163 @@
+.PartyHeroSection {
+    position: relative;
+    background: linear-gradient(rgba(0, 0, 0, 0.918), rgba(52, 212, 223, 0.568)), url('/images/background.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 1px;
+    height: 100vh;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    font-size: 32px;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.PartyHeroSection::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(60px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(-100px);
+    }
+}
+
+.PartyHeroSection h1 {
+    position: relative;
+    z-index: 1;
+    opacity: 0;
+    /* Initially invisible */
+    animation: fadeIn 2s ease-in-out forwards;
+}
+
+/* Overview Section */
+.PartyOverview {
+    text-align: center;
+    padding: 30px;
+}
+
+/* key Highlights */
+.KeyHighlights {
+    padding: 30px;
+    text-align: center;
+}
+
+.KeyHighlights h3 {
+    padding-bottom: 40px;
+}
+
+.KeyHighlights ul {
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 50px;
+    list-style-type: none;
+    font-weight: 500;
+}
+.KeyHighlights ul li {
+    text-align: center;
+    border: 2px solid black;
+    background-color: rgb(192, 185, 185);
+    border-radius: 10px;
+    height: 40px;
+    font-weight: 700;
+}
+
+/* Winners */
+.champions {
+    
+    padding: 30px;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.categoryGrid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    padding: 50px;
+    gap: 20px;
+}
+
+.categoryCard {
+    position: relative;
+    background: linear-gradient(130deg, #2114ad4f, #01081df3 , #1b04eb9f);
+    /* background: conic-gradient(from 0deg, red, orange, yellow, green, blue, indigo, violet); */
+     /* background: radial-gradient(circle at center, #30085f, #92fe9d); */
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 20px;
+    height: 350px;
+    width: 300px;
+    transition: transform 0.3s;
+}
+
+.categoryCard:hover {
+    transform: scale(1.05);
+}
+
+.categoryCard img {
+    padding: 10px;
+    height: 80%;
+    width: 100%;
+}
+
+.categoryCard-text {
+    background-color: rgb(0, 0, 0);
+    border-radius: 15px;
+    color: white;
+    font-size: 14px;
+}
+
+/* Gallery */
+
+/* Masonry Layout */
+.party-grid-container {
+  column-count: 3; /* You can set to 2 or 4 depending on screen width */
+  column-gap: 1rem;
+  padding: 1rem;
+}
+
+.party-grid-item {
+  margin-bottom: 1rem;
+  break-inside: avoid;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.party-grid-item img {
+  width: 100%;
+  border: 3px solid black;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  display: block;
+  transition: transform 0.2s;
+}
+
+.party-grid-item:hover img {
+  transform: scale(1.03);
+}
+
+@media (max-width: 1200px) {
+  .party-grid-container {
+    column-count: 2;
+  }
+}
+@media (max-width: 768px) {
+  .party-grid-container {
+    column-count: 1;
+  }
+}
+

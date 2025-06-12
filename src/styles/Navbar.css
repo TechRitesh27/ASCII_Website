@@ -25,11 +25,16 @@
 }
 
 .nav-links li a {
-  color: white;
   text-decoration: none;
+  color: white;
   font-size: 18px;
   padding: 10px 15px;
-  position: relative; /* Required for the underline effect */
+  position: relative;
+}
+
+.active-link {
+  border-bottom: 3px solid #ffcc00; /* Underline the active page */
+  font-weight: bold;
 }
 
 /* Underline Effect on Hover */

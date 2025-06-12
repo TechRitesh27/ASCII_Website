@@ -6,6 +6,7 @@ import TechnicalEvent from "./pages/TechnicalEvent";
 import Sports from "./pages/Sports";
 import FreshersAndFarewellParty from "./pages/FreshersAndFarewellParty";
 import "bootstrap/dist/css/bootstrap.min.css";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
@@ -17,7 +18,9 @@ const App = () => {
         <Route path="/sports" element={<Sports />} />
         <Route path="/freshers-farewell" element={<FreshersAndFarewellParty />} />
       </Routes>
+      <Footer/>    
     </Router>
+
   );
 };
 
