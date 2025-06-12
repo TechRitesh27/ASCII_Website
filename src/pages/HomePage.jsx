@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../styles/homepage.css";
 import ImageModal from "./ImageModal";
-import CommitteeCarousel from "../components/CommitteeCarousel"
+import CommitteeCarousel from "../components/committeeCarousel"
 
 
 const HomePage = () => {
