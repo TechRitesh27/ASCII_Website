@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../styles/sports.css";
+import "../styles/heroSection.css"
 import ImageModal from "./ImageModal";
 
 const Sports = () => {
@@ -15,7 +16,7 @@ const Sports = () => {
 
   return (
     <div className="sports-page">
-      <div className="sports-hero-section">
+      <div className="hero-section">
         <h1>AAROHAN 2K25 - Sports Event</h1>
       </div>
 
@@ -38,8 +39,6 @@ const Sports = () => {
         <h3>🎯 Strategic Indoor Battles</h3>
         <ul>
           <li>🏸 <b>Badminton Matches</b> – Lightning-fast rallies and pure technique.</li>
-          <li>♟️ <b>Chess Battles</b> – Tactical mind games showcasing brilliant strategies.</li>
-          <li>🎯 <b>Carrom Board Face-Off</b> – Perfect aim and concentration tested in every match.</li>
           <li>🎮 <b>BGMI Esports Tournament</b> – Virtual battlefield challenges with ultimate precision.</li>
         </ul>
       </section>
@@ -111,12 +110,12 @@ const Sports = () => {
         {/* Winner Images */}
         <h3>📸 Where Effort Met Triumph – Our Winning Squads</h3>
         <div className="winner-gallery">
-          <img src="/images/Sports/Cricket.jpeg" alt="Cricket Winners - TE" />
-          <img src="/images/Sports/Volleyball.jpeg" alt="Volleyball Winners - FE" />
-          <img src="/images/Sports/Basketball.jpeg" alt="Basketball Winners - SE" />
-          <img src="/images/Sports/VolleyballG.jpeg" alt="Badminton Winners - TE" />
-          <img src="/images/Sports/CricketB.jpeg" alt="Chess Winners - FE" />
-          <img src="/images/Sports/Basketball.jpeg" alt="BGMI Esports Winners - TE" />
+          <img src="/images/Sports/cricketWinner.jpg" alt="Boys Cricket Winners - BE" />
+          <img src="/images/Sports/crickWinner.jpg" alt="Girls Cricket Winners - TE" />
+          <img src="/images/Sports/volleyballWinner.jpg" alt="Boys Volleyball Winners - TE" />
+          <img src="/images/Sports/volleyWinner.jpg" alt="Girls Volleyball Winners - SE" />
+          <img src="/images/Sports/basketWinner.jpg" alt="Basketball Winners - BE" />
+          <img src="/images/Sports/badmintonWinner.jpg" alt="Badminton Winner - TE" />
         </div>
       </section>
 
@@ -124,8 +123,8 @@ const Sports = () => {
       <section className="sports-gallery">
         <h2>Sports Gallery</h2>
         <div className="grid-container">
-          {["Cricket.jpeg", "Volleyball.jpeg", "CricketB.jpeg", ".jpeg", "event5.jpeg", "event6.jpeg"].map((img, index) => (
-            <div className="grid-item" key={index} onClick={() => openModal(`/images/${img}`)}>
+          {["b1.jpg" , "b2.jpg" , "b3.jpg" , "b4.jpg" , "b5.jpg" , "ba1.jpg" , "c1.jpg" , "c2.jpg" , "c3.jpg" , "v1.jpg" , "v2.jpg" , "v3.jpg" , "v4.jpg" , "v5.jpg" , "v6.jpg" , "b6.jpeg"].map((img, index) => (
+            <div className="grid-item" key={index} onClick={() => openModal(`/images/Sports/${img}`)}>
               <img src={`/images/Sports/${img}`} alt={`Event ${index + 1}`} />
             </div>
           ))}
@@ -133,15 +132,6 @@ const Sports = () => {
       </section>
       {/* Image Popup Modal */}
       <ImageModal imageSrc={selectedImage} onClose={closeModal} />
-
-      {/* Popup Modal for Image */}
-      {selectedImage && (
-        <div className="modal-overlay" onClick={closeImage}>
-          <div className="modal-content">
-            <img src={selectedImage} alt="Expanded View" className="modal-img" />
-          </div>
-        </div>
-      )}
 
     </div>
   );

@@ -1,0 +1,45 @@
+.hero-section {
+    position: relative;
+    background: linear-gradient(rgba(0, 0, 0, 0.918), rgba(3, 201, 236, 0.6)), url('/images/party_fresher/te4-1.JPG');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 1px;
+    height: 90vh;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    font-size: 32px;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(80px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(-50px);
+    }
+}
+
+.hero-section h1 {
+    position: relative;
+    z-index: 1;
+    opacity: 0;
+    /* Initially invisible */
+    animation: fadeIn 2s ease-in-out forwards;
+}

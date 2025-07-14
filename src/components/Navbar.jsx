@@ -7,39 +7,41 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
-
       <div className="logo-container">
-        <img src="/images/ASCII1.png" alt="ASCII Logo" />
+        {/* Make the logo clickable to redirect to home */}
+        <NavLink to="/">
+          <img src="/images/ASCII.png" alt="ASCII Logo" />
+        </NavLink>
       </div>
-      
+
       <ul className="nav-links">
         <li>
-          <NavLink
-            to="/"
+          <NavLink 
+            to="/" 
             className={location.pathname === "/" ? "active-link" : ""}
           >
             Home
           </NavLink>
         </li>
         <li>
-          <NavLink
-            to="/technical-event"
+          <NavLink 
+            to="/technical-event" 
             className={location.pathname === "/technical-event" ? "active-link" : ""}
           >
             Technical Event
           </NavLink>
         </li>
         <li>
-          <NavLink
-            to="/sports"
+          <NavLink 
+            to="/sports" 
             className={location.pathname === "/sports" ? "active-link" : ""}
           >
             Sports
           </NavLink>
         </li>
         <li>
-          <NavLink
-            to="/freshers-farewell"
+          <NavLink 
+            to="/freshers-farewell" 
             className={location.pathname === "/freshers-farewell" ? "active-link" : ""}
           >
             Freshers & Farewell

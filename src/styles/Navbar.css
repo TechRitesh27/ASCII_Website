@@ -1,13 +1,15 @@
 .navbar {
   display: flex;
+  position: sticky !important;
+  top: 0;
   align-items: center;
   justify-content: space-between;
   padding: 15px;
-  position: absolute; /* Keeps navbar over homepage */
+  /* position: absolute; Keeps navbar over homepage */
   width: 100%;
   top: 0;
   z-index: 1000;
-  background-color: rgba(5, 5, 5, 0.8); /* Semi-transparent black */
+  background-color: #0F172A; /* Semi-transparent black */
   backdrop-filter: blur(5px); /* Adds subtle blur effect */
 }
 
@@ -15,25 +17,26 @@
   height: 50px; /* Adjust height to fit navbar */
   width: auto; /* Keeps aspect ratio */
   padding-left: 50px;
-  padding-top: 5px;
+  padding-top: 3px;
 }
 
 .nav-links {
   display: flex;
   gap: 20px;
   list-style-type: none;
+  padding-right: 30px;
 }
 
 .nav-links li a {
   text-decoration: none;
-  color: white;
-  font-size: 18px;
+  color: #F8FAFC;
+  font-size: 15px;
   padding: 10px 15px;
   position: relative;
 }
 
 .active-link {
-  border-bottom: 3px solid #ffcc00; /* Underline the active page */
+  border-bottom: 3px solid #034ef1; /* Underline the active page */
   font-weight: bold;
 }
 
@@ -45,7 +48,7 @@
   bottom: -3px; /* Adjust distance from text */
   width: 0%;
   height: 2px;
-  background-color: white;
+  background-color: #F8FAFC;
   transition: width 0.3s ease-in-out;
 }
 

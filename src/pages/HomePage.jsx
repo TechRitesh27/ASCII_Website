@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../styles/homepage.css";
+import "../styles/heroSection.css"
 import ImageModal from "./ImageModal";
 import CommitteeCarousel from "../components/committeeCarousel"
 
@@ -15,27 +16,20 @@ const HomePage = () => {
     setSelectedImage(null);
   };
 
-
   return (
     <div className="homepage">
       {/* Background Image */}
       <div className="hero-section">
-        <div className="text-container">
-          <h1>ASCII - Student's Association of Computer Department</h1>
-          {/* <h3>ASCII (Association of Students of Computer Engineering) is the official student body of the Computer Engineering Department at PREC Loni. Formed with a vision to promote technical growth, creativity, and leadership among students, ASCII acts as a bridge between faculty and learners, academics and innovation.
-            We organize a wide range of events including technical fests, cultural programs, social awareness drives, and fun activities to create a dynamic and collaborative campus environment.
-            In the academic year 2024–25, ASCII proudly introduced AAROHAN 2K25 — a themed celebration uniting all major student-led events under one identity of energy, elegance, and evolution./
-          </h3> */}
-        </div>
+        <h1>ASCII - Student's Association of Computer Department</h1>
       </div>
 
       {/* about ASCII  */}
       <section className="about-section">
         <div className="text-container1">
           <h2>About ASCII</h2>
-          <p>ASCII (Association of Students of Computer Engineering) is the official student body of the Computer Engineering Department at PREC Loni. Formed with a vision to promote technical growth, creativity, and leadership among students, ASCII acts as a bridge between faculty and learners, academics and innovation.
+          <p> <strong>ASCII</strong> (Association of Students of Computer Engineering) is the official student body of the <strong>Computer Engineering Department at PREC Loni. </strong> Formed with a vision to promote technical growth, creativity, and leadership among students, ASCII acts as a bridge between faculty and learners, academics and innovation.
             We organize a wide range of events including technical fests, cultural programs, social awareness drives, and fun activities to create a dynamic and collaborative campus environment.
-            In the academic year 2024–25, ASCII proudly introduced AAROHAN 2K25 — a themed celebration uniting all major student-led events under one identity of energy, elegance, and evolution.</p>
+            In the academic year 2024–25, ASCII proudly introduced <strong>AAROHAN 2K25 </strong> — a themed celebration uniting all major student-led events under one identity of energy, elegance, and evolution.</p>
         </div>
 
         <div className="image-container">
@@ -50,12 +44,14 @@ const HomePage = () => {
         </div>
 
         <div className="text-container">
-          <h2>Aarohan 2K25</h2>
-          <p>Aarohan 2K25 was not just an event — it was an experience. <br />
-            Organized by the ASCII Committee, Aarohan 2K25 brought together energy, excitement, and expression through three major events: <br />
-            <b>Technical Fest <br />
-              Sports Matches <br />
-              Freshers & Farewell Celebration. </b> <br />
+          <h2>AAROHAN 2K25</h2>
+          <p>AAROHAN 2K25 was not just an event — it was an experience. <br />
+            Organized by the ASCII Committee, AAROHAN 2K25 brought together energy, excitement, and expression through three major events: <br />
+            <ul>
+              <li>Technical Fest</li>
+              <li>Sports Matches</li>
+              <li>Freshers & Farewell Celebration.</li>
+            </ul>
             From tech brains to stage vibes, and cricket fever to DJ beats — every moment reflected unity, creativity, and the spirit of our department. <br />
             Aarohan means rise — and with this event, our memories, friendships, and efforts truly rose to a new level.</p>
         </div>
@@ -63,13 +59,13 @@ const HomePage = () => {
 
       {/* Events cards  */}
       <div className="EventText">
-        <h2>Our Events</h2>
+        <h2>Our EVENTS </h2>
       </div>
       <section className="event-cards">
         <div className="card">
           <a href="/technical-event">
             <div className="card-image">
-              <img src="/images/TechEvent.jpg" alt="Technical Event" />
+              <img src="/images/event2.jpg" alt="Technical Event" />
               <div className="overlay-text">Explore coding challenges, hackathons, and tech talks!</div>
             </div>
             <h3>Technical Event</h3>
@@ -79,7 +75,7 @@ const HomePage = () => {
         <div className="card">
           <a href="/sports">
             <div className="card-image">
-              <img src="/images/Sports.jpg" alt="Sports Event" />
+              <img src="/images/event7.jpg" alt="Sports Event" />
               <div className="overlay-text">Engage in exciting competitions and showcase your athleticism!</div>
             </div>
             <h3>Sports Event</h3>
@@ -89,7 +85,7 @@ const HomePage = () => {
         <div className="card">
           <a href="/freshers-farewell">
             <div className="card-image">
-              <img src="/images/FnFParty.jpg" alt="Freshers & Farewell" />
+              <img src="/images/event9.jpg" alt="Freshers & Farewell" />
               <div className="overlay-text">Celebrate fresh beginnings and memorable farewells.</div>
             </div>
             <h3>Freshers & Farewell Party</h3>
@@ -101,7 +97,7 @@ const HomePage = () => {
       <section className="event-highlights">
         <h2>Aarohan 2K25 - Events Highlights</h2>
         <div className="grid-container">
-          {["event1.jpeg", "event2.jpeg", "event3.jpeg", "event4.jpeg", "event5.jpeg", "event6.jpeg"].map((img, index) => (
+          {["event1.jpeg", "event2.jpg", "event3.jpg", "event4.jpeg", "event5.jpg", "event6.jpg", "event7.jpg", "event8.jpg", "event9.jpg"].map((img, index) => (
             <div className="grid-item" key={index} onClick={() => openModal(`/images/${img}`)}>
               <img src={`/images/${img}`} alt={`Event ${index + 1}`} />
             </div>

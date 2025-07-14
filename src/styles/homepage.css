@@ -1,49 +1,6 @@
-.hero-section {
-  position: relative;
-  background-image: url('/images/background.jpeg'); /* Image only for hero & navbar */
-  background-size: cover;
-  background-position: center 1px;
-  background-repeat: no-repeat;
-  width: 100vw;
-  height: 100vh; /* Keeps full screen height */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: rgba(255, 255, 255, 0.8);
-}
-.hero-section h1 {
-    color: rgba(236, 9, 217, 0.582);
-    text-align: center;
-    font-weight: 900;
-    padding-top: 150px;
-}
-
-/* Semi-transparent overlay */
-.hero-section::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.7); /* Adjust opacity here */
-}
-
-.text-container {
-  /* padding-top: %; */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.homepage h2 {
+  color: #0F172A !important;
   text-align: center;
-  gap: 10px;
-  /* color: rgb(240, 174, 8); */
-}
-
-.text-container h3 {
-  padding-left: 20%;
-  padding-right: 20%;
-  padding-bottom: 8%;
-
 }
 
 /*about ASCII*/
@@ -109,9 +66,16 @@
 }
 
 .card {
+  background-color: #0F172A !important;
+  border: 2px solid black !important;
+  border-radius: 10px !important;
   width: 300px;
   text-align: center;
   cursor: pointer;
+}
+
+.card h3 {
+  color: #F8FAFC;
 }
 
 .card a {
@@ -140,12 +104,13 @@
 
 .overlay-text {
   position: absolute;
-  bottom: 0;
+  /* bottom: 0; */
+  top: 50%;
   left: 0;
   width: 100%;
   padding: 10px;
   background-color: rgba(0, 0, 0, 0.7);
-  color: white;
+  color: #F8FAFC;
   font-size: 14px;
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
@@ -173,19 +138,9 @@
   object-fit: cover; /* Crops images while maintaining aspect ratio */
 }
 
-.committee-section {
-  padding-top: 20px;
-}
-.committee-section h2 {
-  padding-bottom: 20px;
-  text-align: center;
-  color: rgb(94, 94, 211);
-}
-
-
 /* Footer */
 footer {
-  background-color: #222;
+  background-color: #0F172A;
   color: white;
   text-align: left;
   padding: 20px;

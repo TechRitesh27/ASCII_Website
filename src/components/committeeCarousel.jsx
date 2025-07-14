@@ -1,6 +1,6 @@
 import React from 'react';
 import { Carousel, Card, Row, Col, Image } from 'react-bootstrap';
-import '../styles/CommitteeCarousel.css'
+import '../styles/committeeCarousel.css'
 
 const committeeMembers = [
   { name: "Sanskruti Patharekar", instagram: "@s_kruti26", post: "President", image: "/images/members/background.jpeg" },
@@ -42,7 +42,7 @@ const chunkArray = (arr, size) =>
     i % size === 0 ? [...acc, arr.slice(i, i + size)] : acc, []);
 
 const CommitteeCarousel = () => {
-  const memberGroups = chunkArray(committeeMembers, 3);
+  const memberGroups = chunkArray(committeeMembers, 4);
 
   return (
     <Carousel indicators={false} interval={null}>
@@ -51,19 +51,41 @@ const CommitteeCarousel = () => {
           <div className="d-flex justify-content-center">
             <Row className="w-100 justify-content-center">
               {group.map((member, i) => (
-                <Col md={4} sm={6} xs={12} key={i} className="mb-4 d-flex justify-content-center">
-                  <Card className="p-3 shadow-lg committee-card d-flex flex-column justify-content-between" style={{ width: '100%', maxWidth: '250px', height: '200px', border:'3px solid bisque'}}>
+                <Col lg={3} md={4} sm={6} xs={12} key={i} className="mb-4 d-flex justify-content-center">
+                  <Card className="p-3 shadow-lg committee-card d-flex flex-column justify-content-between" style={{
+                    width: '100%', maxWidth: '300px', height: '250px', border: '3px solid black', backgroundColor: '#0F172A',
+                    color: '#F8FAFC'
+                  }}>
                     <Row className="align-items-center">
                       <Col xs={4} className="text-center">
-                        <Image src={member.image} roundedCircle width={70} height={70} />
+                        <Image src={member.image} roundedCircle width={90} height={90} style={{
+                          border: '2px solid black',
+                          boxShadow: '0 4px 10px rgba(0, 0, 0, 0.4)'
+                        }} />
                       </Col>
                       <Col xs={8}>
                         <h6>{member.name}</h6>
-                        <p className="text-muted mb-1" style={{ fontSize: "0.9em" }}>{member.instagram}</p>
+                        <p
+                          className="mb-1"
+                          style={{
+                            fontSize: "0.9em",
+                            color: "#38BDF8"  // Tailwind's sky-400, nice for links
+                          }}
+                        >
+                          {member.instagram}
+                        </p>
+
                       </Col>
                     </Row>
-                    <div className="text-center mt-2">
-                      <strong>{member.post}</strong>
+                    <div
+                      className="text-center mt-2"
+                      style={{
+                        backgroundColor: '#1E293B',
+                        padding: '6px 8px',
+                        borderRadius: '5px'
+                      }}
+                    >
+                      <strong style={{ color: '#F8FAFC', fontSize:'18px' }}>{member.post}</strong>
                     </div>
                   </Card>
                 </Col>
