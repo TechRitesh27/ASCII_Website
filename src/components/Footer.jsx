@@ -14,7 +14,7 @@ const Footer = () => {
           <a href="https://www.instagram.com/ascii_comp?igsh=MXFjNXZlcWh6a3RjNA==" target="_blank">📷 Instagram</a> |
           <a href="https://youtube.com/ascii.prec" target="_blank">🎥 YouTube</a> <br />
           © 2025 ASCII Committee. All Rights Reserved. <br /> </p>
-          <p className="author">✍️ Author - <strong>Ritesh Ukade</strong>
+          <p className="author">✍️ Author - <strong>TE COMP 2024-25</strong>
         </p>
       </footer>
   );
