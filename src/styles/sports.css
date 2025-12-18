@@ -1,98 +1,215 @@
-.ports-page h2 {
-  color: #0F172A !important;
+/* ===============================
+   GLOBAL
+================================ */
+.sports-page {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.sports-page h2 {
+  color: #0F172A;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.sports-page h3 {
+  color: #0F172A;
+  margin-top: 24px;
+  margin-bottom: 12px;
   text-align: center;
 }
 
-/* Overview Section */
+/* ===============================
+   OVERVIEW SECTION
+================================ */
 .sports-overview {
-  padding: 50px;
+  max-width: 1000px;
+  margin: auto;
+  padding: 30px 20px;
   text-align: center;
 }
 
-.sports-overview h3 {
-    padding: 10px;
+.sports-overview p {
+  line-height: 1.7;
+  margin-bottom: 20px;
 }
 
 .sports-overview ul {
-  list-style-type: none;
+  list-style: none;
   padding: 0;
+  margin: 10px 0 20px;
 }
 
 .sports-overview ul li {
-  font-size: 18px;
-  margin: 5px 0;
+  font-size: 16px;
+  margin: 8px 0;
 }
 
-/* Results Section */
+/* ===============================
+   RESULTS SECTION
+================================ */
 .sports-results {
+  padding: 30px 15px;
   text-align: center;
-  padding: 50px;
 }
-.sports-results h3 {
-    padding-top: 40px;
-    padding-bottom: 20px;
+
+.sports-results p {
+  max-width: 900px;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+/* ===============================
+   RESPONSIVE TABLE
+================================ */
+.result-table {
+  overflow-x: auto;
+  margin-top: 20px;
 }
 
 .result-table table {
   width: 100%;
+  min-width: 720px;
   border-collapse: collapse;
-  text-align: center;
 }
 
-.result-table th, .result-table td {
-  padding: 15px;
+.result-table th,
+.result-table td {
+  padding: 12px;
   border: 1px solid #ddd;
+  font-size: 15px;
 }
 
 .result-table th {
-  background-color: #222;
-  color: white;
+  background-color: #0F172A;
+  color: #F8FAFC;
 }
 
 .result-table tbody tr:hover {
-  background-color: rgba(255, 204, 0, 0.2); /* Soft highlight on hover */
+  background-color: rgba(15, 23, 42, 0.1);
 }
 
-/* Winner Gallery */
+/* ===============================
+   WINNER GALLERY
+================================ */
 .winner-gallery {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 20px;
-  justify-content: center;
-  margin-top: 20px;
+  justify-items: center;
+  margin-top: 30px;
 }
 
 .winner-gallery img {
-  width: 300px;
-  height: 250px;
+  width: 100%;
+  max-width: 300px;
   border-radius: 10px;
-  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+  transition: transform 0.3s ease;
 }
 
 .winner-gallery img:hover {
-  transform: scale(1.1); /* Smooth zoom effect on hover */
+  transform: scale(1.05);
 }
 
-
-/* mini gallery */
-
-.sports-gallery h2 {
-  text-align: center;
-  color: #0F172A;
+/* ===============================
+   SPORTS GALLERY
+================================ */
+.sports-gallery {
+  padding: 30px 15px;
 }
 
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  padding: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
 }
 
-/* Grid Items */
+.grid-item {
+  cursor: pointer;
+  transition: transform 0.25s ease;
+}
+
+.grid-item:hover {
+  transform: scale(1.03);
+}
+
 .grid-item img {
   width: 100%;
-  /* height: auto; */
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* ===============================
+   LOAD MORE BUTTON
+================================ */
+.load-more-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+}
+
+.load-more-btn {
+  background-color: #0F172A;
+  color: #F8FAFC;
+  border: none;
+  padding: 10px 24px;
+  font-size: 16px;
   border-radius: 8px;
-  height: 200px; /* Set a uniform height for all images */
-  object-fit: cover; /* Crops images while maintaining aspect ratio */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.load-more-btn:hover {
+  background-color: #1E293B;
+}
+
+/* ===============================
+   RESPONSIVE BREAKPOINTS
+================================ */
+
+/* Tablets */
+@media (max-width: 992px) {
+  .grid-item img {
+    height: 180px;
+  }
+}
+
+/* Mobile Devices */
+@media (max-width: 768px) {
+  .sports-overview {
+    padding: 20px 15px;
+  }
+
+  .sports-overview ul li {
+    font-size: 15px;
+  }
+
+  .grid-item img {
+    height: 160px;
+  }
+
+  .load-more-btn {
+    width: 90%;
+    max-width: 320px;
+  }
+}
+
+/* Small Mobiles */
+@media (max-width: 480px) {
+  .sports-overview ul li {
+    font-size: 14px;
+  }
+
+  .grid-item img {
+    height: 150px;
+  }
+
+  .result-table th,
+  .result-table td {
+    font-size: 14px;
+  }
 }

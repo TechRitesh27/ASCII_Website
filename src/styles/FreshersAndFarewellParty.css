@@ -1,122 +1,187 @@
+/* ===============================
+   GLOBAL HEADINGS
+================================ */
 .FF-party h2 {
-  color: #0F172A !important;
+  color: #0F172A;
   text-align: center;
+  margin-bottom: 20px;
 }
 
-/* Overview Section */
+/* ===============================
+   OVERVIEW SECTION
+================================ */
 .PartyOverview {
   text-align: center;
   padding: 20px;
+  max-width: 900px;
+  margin: auto;
+  line-height: 1.6;
 }
 
-/* key Highlights */
+/* ===============================
+   KEY HIGHLIGHTS
+================================ */
 .KeyHighlights {
-  text-align: center;
-  padding: 10px;
-}
-
-.KeyHighlights h2 {
   padding: 20px;
 }
 
 .KeyHighlights ul {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 50px;
-  list-style-type: none;
-  font-weight: 500;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 16px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .KeyHighlights ul li {
-  text-align: center;
   color: #F8FAFC;
-  border: 3px solid black;
   background-color: #0F172A;
   border-radius: 10px;
-  height: 40px;
+  padding: 10px;
   font-weight: 700;
+  text-align: center;
 }
 
-/* Winners */
+/* ===============================
+   WINNERS SECTION
+================================ */
 .champions {
-  padding: 30px;
-  align-items: center;
+  padding: 30px 15px;
 }
 
 .categoryGrid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  padding: 50px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 20px;
+  justify-items: center;
 }
 
 .categoryCard {
-  position: relative;
   background: linear-gradient(110deg, #0F172A, #1E293B, #F8FAFC);
-  /* background: conic-gradient(from 0deg, red, orange, yellow, green, blue, indigo, violet); */
-  /* background: radial-gradient(circle at center, #30085f, #92fe9d); */
   text-align: center;
-  border: 2px solid black;
   border-radius: 20px;
-  height: 400px;
-  width: 300px;
-  transition: transform 0.3s;
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  padding-bottom: 10px;
+  transition: transform 0.3s ease;
 }
 
 .categoryCard:hover {
-  transform: scale(1.05);
+  transform: scale(1.04);
 }
 
 .categoryCard img {
-  padding: 10px;
-  height: 80%;
   width: 95%;
+  height: auto;
+  padding: 10px;
+  border-radius: 15px;
 }
 
 .categoryCard-text {
-  border-radius: 15px;
   color: white;
-  font-size: 12px;
+  font-size: 14px;
+  padding: 5px 10px;
 }
 
-/* Gallery */
+/* ===============================
+   GALLERY (MASONRY)
+================================ */
+.party-event-highlights {
+  padding: 20px 10px;
+}
 
-/* Masonry Layout */
 .party-grid-container {
-  column-count: 3;
-  /* You can set to 2 or 4 depending on screen width */
+  column-count: 4;
   column-gap: 1rem;
-  padding: 1rem;
 }
 
 .party-grid-item {
-  margin-bottom: 1rem;
   break-inside: avoid;
+  margin-bottom: 1rem;
   cursor: pointer;
-  transition: transform 0.3s ease;
+  transition: transform 0.25s ease;
 }
 
 .party-grid-item img {
   width: 100%;
-  border: 3px solid black;
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   display: block;
-  transition: transform 0.2s;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 .party-grid-item:hover img {
   transform: scale(1.03);
 }
 
+/* ===============================
+   LOAD MORE BUTTON
+================================ */
+.load-more-wrapper {
+  text-align: center;
+  margin: 25px 0;
+}
+
+.load-more-btn {
+  background-color: #0F172A;
+  color: #F8FAFC;
+  border: none;
+  padding: 10px 22px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.load-more-btn:hover {
+  background-color: #1E293B;
+}
+
+/* ===============================
+   RESPONSIVE BREAKPOINTS
+================================ */
+
+/* Large Tablets */
 @media (max-width: 1200px) {
+  .party-grid-container {
+    column-count: 3;
+  }
+}
+
+/* Tablets */
+@media (max-width: 992px) {
   .party-grid-container {
     column-count: 2;
   }
 }
 
+/* Mobile Devices */
 @media (max-width: 768px) {
+  .PartyOverview {
+    padding: 15px;
+  }
+
+  .KeyHighlights ul {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  }
+
   .party-grid-container {
     column-count: 1;
+  }
+
+  .load-more-btn {
+    width: 90%;
+    max-width: 300px;
+  }
+}
+
+/* Small Mobiles */
+@media (max-width: 480px) {
+  .categoryCard-text {
+    font-size: 13px;
+  }
+
+  .load-more-btn {
+    font-size: 15px;
   }
 }
